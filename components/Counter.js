@@ -6,6 +6,7 @@ class Counter extends Component {
     fontSize: '12pt',
     padding: '5px 15px',
   };
+
   constructor(props) {
     super(props);
     this.doAction = this.doAction.bind(this);
@@ -13,7 +14,7 @@ class Counter extends Component {
   }
 
   doAction(e) {
-    if (e.shiftkey) {
+    if (e.shiftKey) {
       return this.props.dispatch({ type: 'DECREMENT' });
     } else {
       return this.props.dispatch({ type: 'INCREMENT' });

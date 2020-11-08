@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 
-// ステートの初期化
+// ステート初期値
 const initial = {
   message: 'START',
   count: 0,
@@ -30,7 +30,7 @@ function counterReducer(state = initial, action) {
   }
 }
 
-// isStore関数(redux-stoer.jsで必要)
+// initStore関数（redux-store.jsで必要）
 export function initStore(state = initial) {
   return createStore(counterReducer, state, applyMiddleware(thunkMiddleware));
 }
